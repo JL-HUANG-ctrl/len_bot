@@ -1,3 +1,13 @@
+'''
+Author: 黄江林
+Date: 2024-10-21 22:31:22
+LastEditors: jl_wsl hjl13109110353@163.com
+LastEditTime: 2024-10-21 22:34:15
+FilePath: /lenbot_ws/src/len_bot/launch/rsp.launch.py
+Description: 
+
+Copyright (c) 2024 by JL HUANG, All Rights Reserved. 
+'''
 import os
 
 from ament_index_python.packages import get_package_share_directory
@@ -16,7 +26,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
 
     # Process the URDF file
-    pkg_path = os.path.join(get_package_share_directory('my_bot'))
+    pkg_path = os.path.join(get_package_share_directory('len_bot'))
     xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     
